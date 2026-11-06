@@ -1,0 +1,7 @@
+# Python 3.11 (tested 3.11, macOS arm64)
+numpy==2.4.6
+pandas==3.0.0
+scipy==1.17.1
+scikit-learn==1.6.1
+torch==2.7.0
+matplotlib==3.10.3

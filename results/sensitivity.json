@@ -1,0 +1,159 @@
+{
+ "sens": {
+  "operational scale": {
+   "N": 111,
+   "MAE": 0.629,
+   "bias": -0.372,
+   "fac": 2.91,
+   "w3": 50.5,
+   "r": 0.499
+  },
+  "background subtracted": {
+   "N": 111,
+   "MAE": 0.653,
+   "bias": -0.413,
+   "fac": 3.24,
+   "w3": 48.6,
+   "r": 0.478
+  },
+  "true irradiance (x1/0.7 all)": {
+   "N": 111,
+   "MAE": 0.601,
+   "bias": -0.245,
+   "fac": 2.9,
+   "w3": 52.3,
+   "r": 0.499
+  },
+  "no rescaling after 2020": {
+   "N": 111,
+   "MAE": 0.628,
+   "bias": -0.343,
+   "fac": 3.05,
+   "w3": 49.5,
+   "r": 0.489
+  },
+  "triangular proxy": {
+   "N": 111,
+   "MAE": 0.65,
+   "bias": -0.386,
+   "fac": 3.08,
+   "w3": 46.8,
+   "r": 0.485
+  },
+  "visible disk, |lon|<=90": {
+   "N": 106,
+   "MAE": 0.616,
+   "bias": -0.367,
+   "fac": 2.89,
+   "w3": 50.9,
+   "r": 0.551
+  },
+  "X_int above Balch minimum": {
+   "N": 105,
+   "MAE": 0.598,
+   "bias": -0.326,
+   "fac": 2.74,
+   "w3": 52.4,
+   "r": 0.568
+  },
+  "c25 operational": {
+   "N": 26,
+   "MAE": 0.56,
+   "bias": -0.289,
+   "fac": 2.18,
+   "w3": 57.7,
+   "r": 0.512
+  },
+  "c25 no rescaling": {
+   "N": 26,
+   "MAE": 0.554,
+   "bias": -0.162,
+   "fac": 2.7,
+   "w3": 53.8,
+   "r": 0.512
+  },
+  "garcia": {
+   "N": 111,
+   "MAE": 1.104,
+   "bias": -1.038,
+   "fac": 7.43,
+   "w3": 28.8,
+   "r": 0.445
+  },
+  "garcia EM at maximum": {
+   "N": 111,
+   "MAE": 1.085,
+   "bias": -1.009,
+   "fac": 6.67,
+   "w3": 28.8,
+   "r": 0.447
+  },
+  "garcia true flux (EM+0.155, X/0.7)": {
+   "N": 111,
+   "MAE": 0.918,
+   "bias": -0.754,
+   "fac": 5.19,
+   "w3": 38.7,
+   "r": 0.421
+  },
+  "garcia cool flares": {
+   "N": 103,
+   "MAE": 0.958,
+   "bias": -0.887,
+   "fac": 5.89,
+   "w3": 31.1,
+   "r": 0.512
+  },
+  "balch on cool flares": {
+   "N": 103,
+   "MAE": 0.599,
+   "bias": -0.326,
+   "fac": 2.86,
+   "w3": 52.4,
+   "r": 0.575
+  },
+  "balch on hot flares": {
+   "N": 8,
+   "MAE": 1.018,
+   "bias": -0.966,
+   "fac": 9.43,
+   "w3": 25.0,
+   "r": -0.62
+  },
+  "garcia offset removed (in-sample)": {
+   "N": 111,
+   "MAE": 0.777,
+   "bias": 0.0,
+   "fac": 4.48,
+   "w3": 36.9,
+   "r": 0.445
+  },
+  "garcia cool, offset": {
+   "offset": 0.887,
+   "EM_equiv": 0.379
+  }
+ },
+ "lead": {
+  "balch t_half": {
+   "after_peak_min": 18.183333333333334,
+   "to_onset_h": 2.6333333333333333,
+   "to_max_h": 11.75,
+   "before_onset_pct": 92.7927927927928,
+   "before_max_pct": 100.0
+  },
+  "garcia t25": {
+   "after_peak_min": 25.0,
+   "to_onset_h": 2.3666666666666667,
+   "to_max_h": 11.716666666666667,
+   "before_onset_pct": 90.990990990991,
+   "before_max_pct": 100.0
+  },
+  "rqnn issue": {
+   "after_peak_min": 18.4,
+   "to_onset_h": 2.6416666666666666,
+   "to_max_h": 11.775,
+   "before_onset_pct": 91.8918918918919,
+   "before_max_pct": 100.0
+  }
+ }
+}

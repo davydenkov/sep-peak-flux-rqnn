@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite it as below."
+title: "sep-peak-flux-rqnn: data and code for the Garcia-Balch relations tested against a recurrent quantum neural network (1997-2026)"
+authors:
+  - family-names: Davydenkov
+    given-names: I.
+    orcid: "https://orcid.org/0009-0008-7369-5831"
+    affiliation: "Space Research Institute of the Russian Academy of Sciences"
+version: "1.0.0"
+date-released: "2026-11-06"
+license: MIT
+repository-code: "https://github.com/davydenkov/sep-peak-flux-rqnn"
