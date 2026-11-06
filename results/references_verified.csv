@@ -9,7 +9,7 @@ authors,year,journal,volume,page,doi_or_id,source_checked
 "Balch, C.C.",2008,Space Weather,6,S01001,10.1029/2007SW000337,Crossref + local PDF
 "Belov, A.",2009,Adv. Space Res.,43,467,10.1016/j.asr.2008.08.011,Crossref + local PDF
 "Belov, A., Garcia, H., Kurt, V., Mavromichalaki, H., Gerontidou, M.",2005,Solar Phys.,229,135,10.1007/s11207-005-4721-3,Crossref + local PDF
-"Bowles, J., Ahmed, S., Schuld, M.",2024,preprint,,,arXiv:2403.07059,JAA list (arXiv)
+"Bowles, J., Ahmed, S., Schuld, M.",2024,preprint,,,arXiv:2403.07059,arXiv
 "Breiman, L.",2001,Mach. Learn.,45,5,10.1023/A:1010933404324,Crossref
 "Cane, H.V., Reames, D.V., von Rosenvinge, T.T.",1988,J. Geophys. Res.,93,9555,10.1029/JA093iA09p09555,Crossref
 "Cliver, E.W., Kahler, S.W., Reames, D.V.",2004,Astrophys. J.,605,902,10.1086/382651,Crossref
@@ -40,7 +40,7 @@ authors,year,journal,volume,page,doi_or_id,source_checked
 "Laurenza, M., Cliver, E.W., Hewitt, J., Storini, M., Ling, A.G., Balch, C.C., et al.",2009,Space Weather,7,S04008,10.1029/2007SW000379,Crossref + local PDF
 "Lavasa, E., Giannopoulos, G., Papaioannou, A., Anastasiadis, A., Daglis, I.A., Aran, A., et al.",2021,Solar Phys.,296,107,10.1007/s11207-021-01837-x,Crossref
 "McClean, J.R., Boixo, S., Smelyanskiy, V.N., Babbush, R., Neven, H.",2018,Nature Commun.,9,4812,10.1038/s41467-018-07090-4,Crossref
-"Müller-Mellin, R., Kunow, H., Fleißner, V., Pehlke, E., Rode, E., Röschmann, N., et al.",1995,Solar Phys.,162,483,10.1007/BF00733437,JAA list (Crossref)
+"Müller-Mellin, R., Kunow, H., Fleißner, V., Pehlke, E., Rode, E., Röschmann, N., et al.",1995,Solar Phys.,162,483,10.1007/BF00733437,Crossref
 "Núñez, M.",2011,Space Weather,9,S07003,10.1029/2010SW000640,Crossref + citing PDF
 "Papaioannou, A., Vainio, R., Raukunen, O., Jiggens, P., Aran, A., Dierckxsens, M., et al.",2022,J. Space Weather Space Clim.,12,24,10.1051/swsc/2022019,Crossref
 "Papaioannou, A., Herbst, K., Ramm, T., Cliver, E.W., Lario, D., Veronig, A.M.",2023,Astron. Astrophys.,671,A66,10.1051/0004-6361/202243407,Crossref + local PDF

@@ -4,7 +4,7 @@ import pickle, sqlite3, sys, zlib, re
 from pathlib import Path
 import numpy as np, pandas as pd
 DB = Path(__file__).resolve().parents[3] / "data/goes_protons_cache/goes_proton_series_cache.sqlite"
-e = pd.read_csv("../../rqnn_jaa/data/events_final.csv"); e["begin"] = pd.to_datetime(e.begin, utc=True, format="mixed"); e["tmax"] = pd.to_datetime(e.tmax, utc=True, format="mixed"); e = e.sort_values("begin").reset_index(drop=True)
+e = pd.read_csv("../data/input/events_final.csv"); e["begin"] = pd.to_datetime(e.begin, utc=True, format="mixed"); e["tmax"] = pd.to_datetime(e.tmax, utc=True, format="mixed"); e = e.sort_values("begin").reset_index(drop=True)
 c = sqlite3.connect(DB); k = pd.read_sql("select cache_key,span_a,span_b from sunpy_series_blob", c)
 k["a"] = pd.to_datetime(k.span_a, utc=True); k["b"] = pd.to_datetime(k.span_b, utc=True) + pd.Timedelta(days=1); k["be"] = k.cache_key.str.split("|").str[5]
 def proxy(d, be):
