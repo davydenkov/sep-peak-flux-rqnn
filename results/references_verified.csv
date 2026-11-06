@@ -1,4 +1,5 @@
 authors,year,journal,volume,page,doi_or_id,source_checked
+"Abbas, A., Sutter, D., Zoufal, C., Lucchi, A., Figalli, A., Woerner, S.",2021,Nature Comput. Sci.,1,403,10.1038/s43588-021-00084-1,Crossref
 "Alberti, T., Laurenza, M., Cliver, E.W., Storini, M., Consolini, G., Lepreti, F.",2017,Astrophys. J.,838,59,10.3847/1538-4357/aa5cb8,Crossref + local PDF
 "Ali, A., Sadykov, V., Kosovichev, A., Kitiashvili, I.N., Oria, V., Nita, G.M., et al.",2024,Astrophys. J. Suppl.,270,15,10.3847/1538-4365/ad0a6c,Crossref
 "Ali, M.A., Abdelkawy, A.G.A., Shaltout, A.M.K., Beheary, M.M.",2025,Sci. Rep.,15,9546,10.1038/s41598-025-92207-1,Crossref + local PDF
@@ -6,16 +7,16 @@ authors,year,journal,volume,page,doi_or_id,source_checked
 "Bain, H.M., Steenburgh, R.A., Onsager, T.G., Stitely, E.M.",2021,Space Weather,19,e2020SW002670,10.1029/2020SW002670,Crossref + local PDF
 "Balch, C.C.",1999,Radiat. Meas.,30,231,10.1016/S1350-4487(99)00052-9,Crossref
 "Balch, C.C.",2008,Space Weather,6,S01001,10.1029/2007SW000337,Crossref + local PDF
-"Bausch, J.",2020,Adv. Neural Inf. Process. Syst.,33,,arXiv:2006.14619,JAA list (arXiv)
 "Belov, A.",2009,Adv. Space Res.,43,467,10.1016/j.asr.2008.08.011,Crossref + local PDF
 "Belov, A., Garcia, H., Kurt, V., Mavromichalaki, H., Gerontidou, M.",2005,Solar Phys.,229,135,10.1007/s11207-005-4721-3,Crossref + local PDF
+"Bowles, J., Ahmed, S., Schuld, M.",2024,preprint,,,arXiv:2403.07059,JAA list (arXiv)
 "Breiman, L.",2001,Mach. Learn.,45,5,10.1023/A:1010933404324,Crossref
 "Cane, H.V., Reames, D.V., von Rosenvinge, T.T.",1988,J. Geophys. Res.,93,9555,10.1029/JA093iA09p09555,Crossref
 "Cliver, E.W., Kahler, S.W., Reames, D.V.",2004,Astrophys. J.,605,902,10.1086/382651,Crossref
-"Davydenkov, I.",2026,J. Astrophys. Astron.,,submitted,,own manuscript JOAA-S-26-00625
 "Desai, M., and Giacalone, J.",2016,Living Rev. Solar Phys.,13,3,10.1007/s41116-016-0002-5,Crossref
 "Dierckxsens, M., Tziotziou, K., Dalla, S., Patsou, I., Marsh, M.S., Crosby, N.B., et al.",2015,Solar Phys.,290,841,10.1007/s11207-014-0641-4,Crossref
 "Efron, B., and Tibshirani, R.J.",1993,"An Introduction to the Bootstrap, Chapman and Hall, New York",,,10.1201/9780429246593,Crossref
+"Emslie, A.G., Dennis, B.R., Shih, A.Y., Chamberlin, P.C., Mewaldt, R.A., Moore, C.S., et al.",2012,Astrophys. J.,759,71,10.1088/0004-637X/759/1/71,Crossref
 "Garcia, H.A.",1994a,Solar Phys.,154,275,10.1007/BF00681100,Crossref
 "Garcia, H.A.",1994b,Astrophys. J.,420,422,10.1086/173572,Crossref
 "Garcia, H.A.",2004a,Space Weather,2,S02002,10.1029/2003SW000001,Crossref + local PDF
@@ -23,6 +24,7 @@ authors,year,journal,volume,page,doi_or_id,source_checked
 "Gold, R.E., Krimigis, S.M., Hawkins, S.E., Haggerty, D.K., Lohr, D.A., Fiore, E., et al.",1998,Space Sci. Rev.,86,541,10.1023/A:1005088115759,Crossref
 "Gopalswamy, N., Yashiro, S., Krucker, S., Stenborg, G., Howard, R.A.",2004,J. Geophys. Res.,109,A12105,10.1029/2004JA010602,Crossref + citing PDFs
 "Gopalswamy, N., Yashiro, S., Michalek, G., Stenborg, G., Vourlidas, A., Freeland, S., et al.",2009,Earth Moon Planets,104,295,10.1007/s11038-008-9282-7,Crossref
+"Gopalswamy, N., Akiyama, S., Yashiro, S., Xie, H., Mäkelä, P., Michalek, G.",2014,Geophys. Res. Lett.,41,2673,10.1002/2014GL059858,Crossref
 "Hosseinzadeh, P., Filali Boubrahimi, S., Hamdi, S.M.",2024,Space Weather,22,e2024SW003982,10.1029/2024SW003982,Crossref
 "Hurlburt, N., Cheung, M., Schrijver, C., Chang, L., Freeland, S., Green, S., et al.",2012,Solar Phys.,275,67,10.1007/s11207-010-9624-2,Crossref + local PDF
 "Janssens, J., Delouille, V., Clette, F., Andries, J.",2025,J. Space Weather Space Clim.,15,14,10.1051/swsc/2025007,Crossref
@@ -37,6 +39,8 @@ authors,year,journal,volume,page,doi_or_id,source_checked
 "King, J.H., and Papitashvili, N.E.",2005,J. Geophys. Res.,110,A02104,10.1029/2004JA010649,Crossref
 "Laurenza, M., Cliver, E.W., Hewitt, J., Storini, M., Ling, A.G., Balch, C.C., et al.",2009,Space Weather,7,S04008,10.1029/2007SW000379,Crossref + local PDF
 "Lavasa, E., Giannopoulos, G., Papaioannou, A., Anastasiadis, A., Daglis, I.A., Aran, A., et al.",2021,Solar Phys.,296,107,10.1007/s11207-021-01837-x,Crossref
+"McClean, J.R., Boixo, S., Smelyanskiy, V.N., Babbush, R., Neven, H.",2018,Nature Commun.,9,4812,10.1038/s41467-018-07090-4,Crossref
+"Müller-Mellin, R., Kunow, H., Fleißner, V., Pehlke, E., Rode, E., Röschmann, N., et al.",1995,Solar Phys.,162,483,10.1007/BF00733437,JAA list (Crossref)
 "Núñez, M.",2011,Space Weather,9,S07003,10.1029/2010SW000640,Crossref + citing PDF
 "Papaioannou, A., Vainio, R., Raukunen, O., Jiggens, P., Aran, A., Dierckxsens, M., et al.",2022,J. Space Weather Space Clim.,12,24,10.1051/swsc/2022019,Crossref
 "Papaioannou, A., Herbst, K., Ramm, T., Cliver, E.W., Lario, D., Veronig, A.M.",2023,Astron. Astrophys.,671,A66,10.1051/0004-6361/202243407,Crossref + local PDF
@@ -45,12 +49,13 @@ authors,year,journal,volume,page,doi_or_id,source_checked
 "Pérez-Salinas, A., Cervera-Lierta, A., Gil-Fuster, E., Latorre, J.I.",2020,Quantum,4,226,10.22331/q-2020-02-06-226,Crossref
 "Reames, D.V.",1999,Space Sci. Rev.,90,413,10.1023/A:1005105831781,Crossref
 "Reames, D.V.",2013,Space Sci. Rev.,175,53,10.1007/s11214-013-9958-9,Crossref
+"Reames, D.V., and Ng, C.K.",1998,Astrophys. J.,504,1002,10.1086/306124,Crossref
 "Richardson, I.G., von Rosenvinge, T.T., Cane, H.V., Christian, E.R., Cohen, C.M.S., Labrador, A.W., et al.",2014,Solar Phys.,289,3059,10.1007/s11207-014-0524-8,Crossref
 "Rotti, S.A., Aydin, B., Martens, P.C.",2024,Astrophys. J.,966,165,10.3847/1538-4357/ad374e,Crossref + local PDF
 "Ryan, D.F., Milligan, R.O., Gallagher, P.T., Dennis, B.R., Tolbert, A.K., Schwartz, R.A., et al.",2012,Astrophys. J. Suppl.,202,11,10.1088/0067-0049/202/2/11,Crossref
+"Schuld, M., Sweke, R., Meyer, J.J.",2021,Phys. Rev. A,103,032430,10.1103/PhysRevA.103.032430,Crossref
 "Struminsky, A.B., Sadovskii, A.M., Grigorieva, I.Yu.",2024,Geomagn. Aeron.,64,139,10.1134/S0016793223600984,Crossref + local PDF
 "Swalwell, B., Dalla, S., Walsh, R.W.",2017,Solar Phys.,292,173,10.1007/s11207-017-1196-y,Crossref + local PDF
-"Takaki, Y., Mitarai, K., Negoro, M., Fujii, K., Kitagawa, M.",2021,Phys. Rev. A,103,052414,10.1103/PhysRevA.103.052414,Crossref
 "Thomas, R.J., Starr, R., Crannell, C.J.",1985,Solar Phys.,95,323,10.1007/BF00152409,Crossref
 "Trottet, G., Samwel, S., Klein, K.-L., Dudok de Wit, T., Miteva, R.",2015,Solar Phys.,290,819,10.1007/s11207-014-0628-1,Crossref + local PDF
 "White, S.M., and Desnoes, D.",2026,Solar Phys.,301,28,10.1007/s11207-026-02618-0,Crossref

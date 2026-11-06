@@ -42,6 +42,10 @@ for r in Jn:
     n = f"{r['m']}:{r['g']}"
     tgt = P if r["scheme"] == "loyo" else ch
     tgt.setdefault(n, np.full(len(y), np.nan))[r["idx"]] = r["p"]
+for f, ren in (("rqnn_gb_predictions.json", {}), ("vqc_predictions.json", {"vqc3": "vqr"})):
+    for r in json.load(open(RES / f)):
+        n = f"{ren.get(r['m'], r['m'])}:{r['g']}"; tgt = P if r["scheme"] == "loyo" else ch
+        tgt.setdefault(n, np.full(len(y), np.nan))[r["idx"]] = r["p"]
 for k in ("balch", "balch_a1", "garcia"):
     ch[k] = np.where(te, P[k], np.nan)
 
@@ -50,7 +54,7 @@ def score(p, m):
     rng = np.random.default_rng(5); b = a[rng.integers(0, len(a), (5000, len(a)))].mean(1)
     return dict(N=int(m.sum()), MAE=a.mean(), lo=np.percentile(b, 2.5), hi=np.percentile(b, 97.5), bias=er.mean(), rmse=np.sqrt((er**2).mean()), sd=er.std(ddof=1), fac=10 ** np.median(a),
                 w3=(a <= np.log10(3)).mean() * 100, w10=(a <= 1).mean() * 100, r=pearsonr(p, t)[0] if np.std(p) > 0 else np.nan, rho=spearmanr(p, t)[0] if np.std(p) > 0 else np.nan, slope=np.polyfit(t, p, 1)[0])
-NAMES = ["clim:none", "balch", "balch_a1", "garcia", "balch_fit", "balch_quad", "balch_lon_fit", "garcia_fit", "fluence:none", "ridge:G0_flare", "rf:G0_flare", "rqnn:G0_flare", "rqnn:G2_flare_cme", "rqnn:G3_full", "rqnn_noent:G3_full", "rqnn:G8_all_precursors", "ridge:G3_full", "rf:G3_full", "gb:G3_full", "rf:G8_all_precursors"]
+NAMES = ["clim:none", "balch", "balch_a1", "garcia", "balch_fit", "balch_quad", "balch_lon_fit", "garcia_fit", "fluence:none", "ridge:Q_balch", "rf:Q_balch", "vqr:Q_balch", "ridge:G0x", "rf:G0x", "vqr:G0x", "ridge:G3x", "rf:G3x", "vqr:G3x", "rqnn:G3x", "rf:G8_all_precursors"]
 c25 = e.cycle.to_numpy() == 25
 SUB = {"all": ok, "c23": ok & (e.cycle.to_numpy() == 23), "c24": ok & (e.cycle.to_numpy() == 24), "c25": ok & c25, "west": ok & (e.lon_w.to_numpy() >= 0) & (e.lon_w.to_numpy() <= 90), "east": ok & (e.lon_w.to_numpy() < 0), "limb": ok & (e.lon_w.to_numpy() > 90) | ok & (e.lon_w.to_numpy() < -90), "ge100": ok & (e.peak_pfu.to_numpy() >= 100), "ge1000": ok & (e.peak_pfu.to_numpy() >= 1000)}
 rows = [dict(subset=s, model=n, **score(P[n], m)) for s, m in SUB.items() for n in NAMES if not np.isnan(P[n][m]).any()]
@@ -59,7 +63,7 @@ rows = [dict(model=n, **score(ch[n], ok & te)) for n in NAMES if n in ch and not
 C = pd.DataFrame(rows); C.to_csv(D / "scores_chrono.csv", index=False)
 pd.set_option("display.width", 220, "display.max_rows", 300)
 print(T[T.subset == "all"].round(3).to_string(index=False)); print(C.round(3).to_string(index=False))
-print(T[T.model.isin(["balch", "balch_fit", "garcia_fit", "rqnn:G3_full", "rqnn:G0_flare", "rf:G3_full", "clim:none"]) & (T.subset != "all")][["subset", "model", "N", "MAE", "bias", "fac", "w3", "rho"]].round(3).to_string(index=False))
+print(T[T.model.isin(["balch", "balch_fit", "garcia_fit", "vqr:G3x", "vqr:Q_balch", "rf:G3x", "clim:none"]) & (T.subset != "all")][["subset", "model", "N", "MAE", "bias", "fac", "w3", "rho"]].round(3).to_string(index=False))
 
 def paired(a, b, m, src=P):
     d = np.abs(src[a][m] - y[m]) - np.abs(src[b][m] - y[m])
@@ -68,7 +72,7 @@ def paired(a, b, m, src=P):
     ys = years[m]; u = np.unique(ys); idx = {v: np.where(ys == v)[0] for v in u}
     cb = np.array([d[np.concatenate([idx[v] for v in rng.choice(u, len(u))])].mean() for _ in range(5000)])
     return dict(a=a, b=b, N=int(m.sum()), d=d.mean(), lo=np.percentile(bs, 2.5), hi=np.percentile(bs, 97.5), clo=np.percentile(cb, 2.5), chi=np.percentile(cb, 97.5), p_w=wilcoxon(d).pvalue, win=(d < 0).mean() * 100)
-pairs = [("rqnn:G3_full", b) for b in ("balch", "garcia", "balch_fit", "balch_lon_fit", "garcia_fit", "clim:none", "rf:G3_full")] + [("rqnn:G0_flare", b) for b in ("balch", "balch_fit", "balch_lon_fit", "garcia_fit")] + [("rqnn:G8_all_precursors", "balch_fit"), ("balch_fit", "clim:none"), ("balch_lon_fit", "balch_fit"), ("garcia_fit", "balch_fit"), ("balch", "clim:none"), ("balch_quad", "balch_fit"), ("balch_quad", "balch"), ("rqnn:G3_full", "balch_quad"), ("rf:G8_all_precursors", "balch_quad")]
+pairs = [("vqr:G3x", b) for b in ("balch", "garcia", "balch_fit", "balch_lon_fit", "garcia_fit", "clim:none", "rf:G3x")] + [("vqr:G0x", b) for b in ("balch", "balch_fit", "balch_lon_fit", "garcia_fit")] + [("vqr:Q_balch", "balch_fit"), ("balch_fit", "clim:none"), ("balch_lon_fit", "balch_fit"), ("garcia_fit", "balch_fit"), ("balch", "clim:none"), ("balch_quad", "balch_fit"), ("balch_quad", "balch"), ("vqr:G3x", "balch_quad"), ("rf:G8_all_precursors", "balch_quad")]
 R = pd.DataFrame([dict(s="loyo", **paired(a, b, ok)) for a, b in pairs] + [dict(s="c25_loyo", **paired(a, b, ok & c25)) for a, b in pairs[:6] + [("balch_quad", "balch_fit"), ("balch_quad", "balch")]] + [dict(s="chrono", **paired(a, b, ok & te, ch)) for a, b in pairs[:6] + [("balch_quad", "balch_fit"), ("balch_quad", "balch")]])
 R.to_csv(D / "paired.csv", index=False); print(R.round(3).to_string(index=False))
 out = pd.DataFrame({"noaa_id": e.noaa_id, "y": y, **{k: P[k] for k in NAMES}}); out.to_csv(D / "forecasts_loyo.csv", index=False)

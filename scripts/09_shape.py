@@ -18,7 +18,7 @@ def loyo(cols):
     return p
 xc = np.where(ok, x, 0)
 M = {"x": [xc], "x,c": [xc, c], "x,x2": [xc, xc**2], "x,x2,c": [xc, xc**2, c], "x,c,xc": [xc, c, xc * c], "x,x2,c,c2": [xc, xc**2, c, c**2], "x,x2,c,c2,xc": [xc, xc**2, c, c**2, xc * c]}
-rq = S["rqnn:Q_balch"].to_numpy(); a = np.abs(rq[ok] - y[ok]); P = {}
+rq = S["vqr:Q_balch"].to_numpy(); a = np.abs(rq[ok] - y[ok]); P = {}
 for k, v in M.items():
     p = loyo(v); P[k] = p; b = np.abs(p[ok] - y[ok]); d = a - b; rng = np.random.default_rng(1); s = d[rng.integers(0, len(d), (20000, len(d)))].mean(1)
     print(f"{k:16s} MAE {b.mean():.3f}  r {np.corrcoef(p[ok], y[ok])[0,1]:.2f}  rqnn-this {d.mean():+.3f} [{np.percentile(s,2.5):+.3f},{np.percentile(s,97.5):+.3f}]")

@@ -22,6 +22,17 @@ if [ -z "${FAST:-}" ]; then
   $PY scripts/10_noise_models.py
 fi
 $PY scripts/11_noise_analysis.py
+if [ -z "${FAST:-}" ]; then
+  $PY scripts/15_regression_vqc.py
+fi
+if [ -z "${FAST:-}" ]; then
+  $PY scripts/18_qnn_claims.py
+fi
+$PY scripts/16_physics.py
+$PY scripts/17_vqc_scores.py
+$PY scripts/19_claims_analysis.py
+$PY scripts/20_extrapolation.py
+$PY scripts/21_early_protons.py
 $PY scripts/12_figures.py
 $PY scripts/13_macros_tables.py
 $PY scripts/14_esm.py

@@ -1,0 +1,31 @@
+{
+ "macros": {
+  "EarlyLon": "W58",
+  "EarlyEast": "7",
+  "EarlyBig": "3",
+  "EarlyCme": "1450",
+  "EarlyX": "0.09",
+  "MidLon": "W48",
+  "MidEast": "12",
+  "MidBig": "6",
+  "MidCme": "1556",
+  "MidX": "0.10",
+  "LateLon": "W11",
+  "LateEast": "34",
+  "LateBig": "9",
+  "LateCme": "1557",
+  "LateX": "0.16",
+  "RhoRiseLon": "$-$0.34",
+  "PRiseLon": "0.0002",
+  "PfuA": "236",
+  "CmeA": "1674",
+  "XintA": "0.14",
+  "PfuB": "73",
+  "CmeB": "1418",
+  "XintB": "0.11",
+  "PfuC": "48",
+  "CmeC": "1120",
+  "XintC": "0.09"
+ },
+ "table": "Within 12 h & 56 & W58 & 7 & 0.09 & 1450 & 61 & 3 & $-$0.16 & 0.23 \\\\\n12--24 h & 26 & W48 & 12 & 0.10 & 1556 & 168 & 6 & $-$0.47 & $-$0.13 \\\\\nAfter 24 h & 29 & W11 & 34 & 0.16 & 1557 & 364 & 9 & $-$0.72 & $-$0.36 \\\\\n"
+}

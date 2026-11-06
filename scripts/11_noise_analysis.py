@@ -39,7 +39,7 @@ def shift(k, key):
     c = P[k][("clean",)][0]; return np.nanmean(np.mean([np.abs(v - c) for v in P[k][key].values()], axis=0)[ok])
 for k, t in P.items():
     if ("xray", .3) not in t: print("no xray", k)
-M = ["balch_pub:-", "fluence_fit:-", "quad:-", "lon_fit:-", "garcia_fit:-", "ridge:Q_balch", "rqnn:Q_balch", "ridge:G3x", "rf:G3x", "rqnn:G0x", "rqnn:G3x", "rqnn_noent:G3x"]
+M = ["balch_pub:-", "fluence_fit:-", "quad:-", "lon_fit:-", "garcia_fit:-", "ridge:Q_balch", "vqr:Q_balch", "ridge:G3x", "rf:G3x", "vqr:G0x", "vqr:G3x", "vqr_noent:G3x"]
 rows = []
 for k in M:
     c = err(k, ("clean",))[ok]; r = {"model": k, "clean": c.mean()}
@@ -56,7 +56,7 @@ def pair(a, b, key, deg=True):
     d = da - db; rng = np.random.default_rng(21); s = d[rng.integers(0, len(d), (20000, len(d)))].mean(1)
     return d.mean(), np.percentile(s, 2.5), np.percentile(s, 97.5)
 R = []
-for a in ("rqnn:G3x", "rqnn:G0x", "rqnn:Q_balch"):
+for a in ("vqr:G3x", "vqr:G0x", "vqr:Q_balch"):
     for b in ("balch_pub:-", "fluence_fit:-", "quad:-", "rf:G3x", "ridge:G3x"):
         for key in (("all", .3), ("all", .5), ("xray", .3), ("xray", .5)):
             for deg in (True, False):
@@ -64,15 +64,15 @@ for a in ("rqnn:G3x", "rqnn:G0x", "rqnn:Q_balch"):
         for key in (("missing",), ("scale",)):
             R.append(dict(a=a, b=b, key=str(key), kind="mae", **dict(zip(("d", "lo", "hi"), pair(a, b, key, False)))))
 for key in (("all", .3), ("all", .5), ("xray", .3), ("xray", .5)):
-    R.append(dict(a="rqnn:G3x", b="rqnn_noent:G3x", key=str(key), kind="degradation", **dict(zip(("d", "lo", "hi"), pair("rqnn:G3x", "rqnn_noent:G3x", key)))))
-    d = np.mean([np.abs(v - P["rqnn:G3x"][("clean",)][0]) for v in P["rqnn:G3x"][key].values()], axis=0)[ok] - np.mean([np.abs(v - P["rqnn_noent:G3x"][("clean",)][0]) for v in P["rqnn_noent:G3x"][key].values()], axis=0)[ok]
+    R.append(dict(a="vqr:G3x", b="vqr_noent:G3x", key=str(key), kind="degradation", **dict(zip(("d", "lo", "hi"), pair("vqr:G3x", "vqr_noent:G3x", key)))))
+    d = np.mean([np.abs(v - P["vqr:G3x"][("clean",)][0]) for v in P["vqr:G3x"][key].values()], axis=0)[ok] - np.mean([np.abs(v - P["vqr_noent:G3x"][("clean",)][0]) for v in P["vqr_noent:G3x"][key].values()], axis=0)[ok]
     rng = np.random.default_rng(22); s = d[rng.integers(0, len(d), (20000, len(d)))].mean(1)
-    R.append(dict(a="rqnn:G3x", b="rqnn_noent:G3x", key=str(key), kind="shift", d=d.mean(), lo=np.percentile(s, 2.5), hi=np.percentile(s, 97.5)))
+    R.append(dict(a="vqr:G3x", b="vqr_noent:G3x", key=str(key), kind="shift", d=d.mean(), lo=np.percentile(s, 2.5), hi=np.percentile(s, 97.5)))
 R = pd.DataFrame(R); R.to_csv(D / "noise_paired.csv", index=False)
 sig = R[(R.lo > 0) | (R.hi < 0)]
-print(R[R.b.isin(["balch_pub:-", "fluence_fit:-", "quad:-"]) & R.a.isin(["rqnn:G3x", "rqnn:Q_balch"])].round(3).to_string(index=False))
+print(R[R.b.isin(["balch_pub:-", "fluence_fit:-", "quad:-"]) & R.a.isin(["vqr:G3x", "vqr:Q_balch"])].round(3).to_string(index=False))
 print("significant:"); print(sig.round(3).to_string(index=False))
-print(R[R.b == "rqnn_noent:G3x"].round(3).to_string(index=False))
+print(R[R.b == "vqr_noent:G3x"].round(3).to_string(index=False))
 # check that the clean run reproduces the main forecasts
 F = pd.read_csv(D / "forecasts_same_inputs.csv")
-print("reproduce G3x", np.nanmax(np.abs(P["rqnn:G3x"][("clean",)][0] - F["rqnn:G3x"].to_numpy())))
+print("reproduce G3x", np.nanmax(np.abs(P["vqr:G3x"][("clean",)][0] - F["vqr:G3x"].to_numpy())))

@@ -57,6 +57,6 @@ R = pd.DataFrame(rows).sort_values("p"); n = len(R); R["p_holm"] = np.minimum(1,
 json.dump({"sens": S, "lead": {k: {a: float(b) for a, b in v.items()} for k, v in L.items()}}, open(D / "sensitivity.json", "w"), indent=1, default=float)
 # how many events in each NOAA S-level are forecast at the right level
 lev = lambda v: np.digitize(v, [2, 3, 4])
-for n in ("balch", "balch_fit", "rqnn:G3_full", "rf:G3_full", "clim:none"):
+for n in ("balch", "balch_fit", "vqr:G3x", "rf:G3x", "clim:none"):
     p = F[n].to_numpy()[ok]; t = y[ok]; print(n, "level hit %", round((lev(p) == lev(t)).mean() * 100, 1), " max pred pfu", round(10 ** p.max()), " pred>=100:", int((p >= 2).sum()), "POD100", round(((p >= 2) & (t >= 2)).sum() / (t >= 2).sum(), 2), "FAR100", round(((p >= 2) & (t < 2)).sum() / max((p >= 2).sum(), 1), 2), "POD1000", round(((p >= 3) & (t >= 3)).sum() / (t >= 3).sum(), 2))
-print(q.assign(cyc=e.cycle)[["cyc","T_pk","logEM_pk","x_int","x_max"]].groupby("cyc").median().round(4).to_string()); print("extremes", e.assign(p=F["rqnn:G3_full"], b=F.balch, bf=F.balch_fit).sort_values("peak_pfu", ascending=False).head(8)[["begin", "hek_class", "peak_pfu", "lon_w", "p", "b", "bf"]].assign(p=lambda d: 10**d.p, b=lambda d: 10**d.b, bf=lambda d: 10**d.bf).round(0).to_string())
+print(q.assign(cyc=e.cycle)[["cyc","T_pk","logEM_pk","x_int","x_max"]].groupby("cyc").median().round(4).to_string()); print("extremes", e.assign(p=F["vqr:G3x"], b=F.balch, bf=F.balch_fit).sort_values("peak_pfu", ascending=False).head(8)[["begin", "hek_class", "peak_pfu", "lon_w", "p", "b", "bf"]].assign(p=lambda d: 10**d.p, b=lambda d: 10**d.b, bf=lambda d: 10**d.bf).round(0).to_string())

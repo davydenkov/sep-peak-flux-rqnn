@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Robustness of the Garcia-Balch forms and the RQNN to errors in the inputs, under leave-one-year-out.
-Same noise procedure as the onset study; all models share the same noise draws per input (common random numbers)."""
+"""Robustness of the Garcia-Balch forms and the quantum regression circuit to errors in the inputs, under leave-one-year-out.
+All models share the same noise draws per input (common random numbers)."""
 from paths import *
 import json, multiprocessing as mp, sys, time, zlib
 from pathlib import Path
@@ -10,7 +10,7 @@ LEVELS = (.1, .2, .3, .5); NREP = 20; NSEED = 3
 XR = ["log_flu", "log_flux", "logEM", "dur25", "log_dur", "log_rise"]
 SCALE = float(np.log10(1 / .7))
 Q = {"Q_balch": ["log_flu", "connect"], "Q_garcia": ["logEM", "log_flux", "dur25"]}
-JOBS = [("balch_pub", "-"), ("fluence_fit", "-"), ("lon_fit", "-"), ("garcia_fit", "-"), ("ridge", "G3x"), ("rf", "G3x"), ("ridge", "Q_balch"), ("rqnn", "Q_balch"), ("rqnn", "G0x"), ("rqnn", "G3x"), ("rqnn_noent", "G3x")]
+JOBS = [("balch_pub", "-"), ("fluence_fit", "-"), ("lon_fit", "-"), ("garcia_fit", "-"), ("ridge", "G3x"), ("rf", "G3x"), ("ridge", "Q_balch"), ("vqr", "Q_balch"), ("vqr", "G0x"), ("vqr", "G3x"), ("vqr_noent", "G3x")]
 
 
 def data(A):
@@ -58,7 +58,7 @@ def job(a):
     elif m == "garcia_fit": ms, feats = [Lin(["logEM", "log_flux", "dur_h"]).fit(tr, y)], ["logEM", "log_flux", "dur25"]
     else:
         feats = Q.get(g) or A.GROUPS[{"G0x": "G0_flare", "G3x": "G3_full"}[g]]
-        ms = [A.make(m, feats, s).fit(tr, y) for s in range(NSEED if m.startswith("rqnn") else 1)]
+        ms = [A.make(m, feats, s).fit(tr, y) for s in range(NSEED if m.startswith("vqr") else 1)]
     cont = [f for f in feats if f != "prior_sep_72h"]
     allc = ["connect", "log_flu", "log_flux", "log_rise", "log_dur", "logEM", "dur25", "cme_v", "cme_w", "DE4_rise", "imf_align_mean", "imf_stability", "imf_theta_abs"]
     sd = tr[allc].std()
@@ -83,7 +83,7 @@ def job(a):
 def main():
     e = pd.read_csv(INP / "events_final.csv"); years = sorted(int(v) for v in e.year.unique())
     jobs = [(y, m, g) for y in years for m, g in JOBS]
-    jobs.sort(key=lambda j: (-(j[2] == "G3x" and j[1].startswith("rqnn")), -(j[1] == "rqnn")))
+    jobs.sort(key=lambda j: (-(j[2] == "G3x" and j[1].startswith("vqr")), -(j[1] == "vqr")))
     print(len(jobs), flush=True); out, t0 = [], time.time()
     with mp.get_context("spawn").Pool(NPROC) as pool:
         for i, r in enumerate(pool.imap_unordered(job, jobs)):

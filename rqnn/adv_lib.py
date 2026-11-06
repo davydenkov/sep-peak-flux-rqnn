@@ -74,7 +74,18 @@ class Cl:
         return self.pipe.predict(df[self.f])
 
 
+class VQR(RQNN):
+    """Regression circuit: every input is known from the first step, three data re-uploading layers."""
+    def _enc(self, df):
+        u = np.clip(self.q.transform(self.imp.transform(df[self.f])), 1e-3, 1 - 1e-3)
+        return np.repeat(u[:, None, :], 3, 1)
+
+
 def make(name, feats, seed):
+    if name == "vqr":
+        return VQR(feats, 42 + seed)
+    if name == "vqr_noent":
+        return VQR(feats, 42 + seed, entangle=False)
     if name == "rqnn":
         return RQNN(feats, 42 + seed)
     if name == "rqnn_noent":

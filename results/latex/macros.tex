@@ -54,14 +54,68 @@
 \newcommand{\ClimRmse}{0.88}
 \newcommand{\ClimWten}{82.0}
 \newcommand{\ClimWthree}{35.1}
+\newcommand{\CmeA}{1674}
+\newcommand{\CmeB}{1418}
+\newcommand{\CmeC}{1120}
+\newcommand{\EaLawOne}{0.59}
+\newcommand{\EaLawOneBig}{0.95}
+\newcommand{\EaLawSix}{0.59}
+\newcommand{\EaLawSixBig}{0.80}
+\newcommand{\EaLawThree}{0.62}
+\newcommand{\EaLawThreeBig}{0.93}
+\newcommand{\EaLinOne}{0.53}
+\newcommand{\EaLinOneBig}{0.83}
+\newcommand{\EaLinSix}{0.42}
+\newcommand{\EaLinSixBig}{0.58}
+\newcommand{\EaLinThree}{0.45}
+\newcommand{\EaLinThreeBig}{0.71}
+\newcommand{\EaNetOne}{0.48}
+\newcommand{\EaNetOneBig}{0.84}
+\newcommand{\EaNetSix}{0.37}
+\newcommand{\EaNetSixBig}{0.52}
+\newcommand{\EaNetThree}{0.44}
+\newcommand{\EaNetThreeBig}{0.77}
+\newcommand{\EaVqOne}{0.48}
+\newcommand{\EaVqOneBig}{0.70}
+\newcommand{\EaVqSix}{0.40}
+\newcommand{\EaVqSixBig}{0.53}
+\newcommand{\EaVqThree}{0.44}
+\newcommand{\EaVqThreeBig}{0.67}
+\newcommand{\EaVqVsLinOne}{$-$0.047 [$-$0.095, $+$0.001]}
 \newcommand{\EarlyBalchBias}{$-$0.16}
 \newcommand{\EarlyBalchMae}{0.46}
+\newcommand{\EarlyBig}{3}
+\newcommand{\EarlyCme}{1450}
+\newcommand{\EarlyEast}{7}
 \newcommand{\EarlyFitBias}{0.22}
 \newcommand{\EarlyFitMae}{0.52}
+\newcommand{\EarlyLon}{W58}
 \newcommand{\EarlyN}{56}
+\newcommand{\EarlyNOne}{83}
+\newcommand{\EarlyNSix}{56}
+\newcommand{\EarlyNThree}{70}
+\newcommand{\EarlyOne}{$-$0.06 [$-$0.12, $+$0.00]}
 \newcommand{\EarlyPfu}{61}
 \newcommand{\EarlyRqBias}{0.23}
-\newcommand{\EarlyRqMae}{0.47}
+\newcommand{\EarlyRqMae}{0.48}
+\newcommand{\EarlySix}{$-$0.17 [$-$0.28, $-$0.06]}
+\newcommand{\EarlyThree}{$-$0.18 [$-$0.27, $-$0.09]}
+\newcommand{\EarlyX}{0.09}
+\newcommand{\EntStaged}{0.574}
+\newcommand{\EntStagedCyc}{0.565}
+\newcommand{\EntStagedDiff}{$+$0.005 [$-$0.012, $+$0.022]}
+\newcommand{\EntVq}{0.573}
+\newcommand{\EntVqCyc}{0.579}
+\newcommand{\EntVqDiff}{$+$0.006 [$-$0.005, $+$0.017]}
+\newcommand{\ExHyb}{1.27}
+\newcommand{\ExHybAbove}{28}
+\newcommand{\ExMlp}{1.27}
+\newcommand{\ExMlpAbove}{6}
+\newcommand{\ExR}{0.20}
+\newcommand{\ExTrunc}{1.04}
+\newcommand{\ExTruncAbove}{56}
+\newcommand{\GapQ}{0.01}
+\newcommand{\GapQRf}{0.18}
 \newcommand{\GapRf}{0.27}
 \newcommand{\GapRidge}{0.04}
 \newcommand{\GapRq}{0.05}
@@ -96,45 +150,75 @@
 \newcommand{\GarciaWten}{55.0}
 \newcommand{\GarciaWthree}{28.8}
 \newcommand{\GtBias}{$-$0.01}
-\newcommand{\GtCyc}{0.636}
-\newcommand{\GtFac}{3.2}
-\newcommand{\GtMae}{0.591}
-\newcommand{\GtR}{0.47}
-\newcommand{\GtVsBalch}{$-$0.044 [$-$0.122, $+$0.032]}
-\newcommand{\GtVsBalchCyc}{$+$0.076 [$-$0.062, $+$0.207]}
-\newcommand{\GtVsBalchP}{0.54}
-\newcommand{\GtVsFit}{$-$0.012 [$-$0.054, $+$0.028]}
-\newcommand{\GtVsFitCyc}{$+$0.015 [$-$0.048, $+$0.080]}
-\newcommand{\GtVsFitP}{0.86}
-\newcommand{\GtVsOld}{$+$0.012 [$-$0.006, $+$0.030]}
-\newcommand{\GtVsOldP}{0.30}
-\newcommand{\GtVsQuad}{$+$0.036 [$-$0.022, $+$0.094]}
-\newcommand{\GtVsQuadP}{0.18}
-\newcommand{\GtVsRf}{$+$0.001 [$-$0.045, $+$0.049]}
-\newcommand{\GtVsRfP}{0.80}
-\newcommand{\GtVsRidge}{$-$0.033 [$-$0.069, $+$0.002]}
-\newcommand{\GtVsRidgeP}{0.07}
+\newcommand{\GtCyc}{0.642}
+\newcommand{\GtFac}{3.3}
+\newcommand{\GtMae}{0.584}
+\newcommand{\GtR}{0.48}
+\newcommand{\GtVsBalch}{$-$0.052 [$-$0.129, $+$0.024]}
+\newcommand{\GtVsBalchCyc}{$+$0.082 [$-$0.059, $+$0.214]}
+\newcommand{\GtVsBalchP}{0.33}
+\newcommand{\GtVsFit}{$-$0.019 [$-$0.057, $+$0.017]}
+\newcommand{\GtVsFitCyc}{$+$0.021 [$-$0.041, $+$0.083]}
+\newcommand{\GtVsFitP}{0.32}
+\newcommand{\GtVsOld}{$-$0.007 [$-$0.024, $+$0.009]}
+\newcommand{\GtVsOldP}{0.57}
+\newcommand{\GtVsQuad}{$+$0.028 [$-$0.026, $+$0.083]}
+\newcommand{\GtVsQuadP}{0.22}
+\newcommand{\GtVsRf}{$-$0.006 [$-$0.048, $+$0.037]}
+\newcommand{\GtVsRfP}{0.86}
+\newcommand{\GtVsRidge}{$-$0.040 [$-$0.074, $-$0.007]}
+\newcommand{\GtVsRidgeP}{0.01}
+\newcommand{\GvFactor}{1.2}
+\newcommand{\GvRand}{0.014}
+\newcommand{\GvTwelve}{0.0076}
+\newcommand{\GvTwo}{0.050}
 \newcommand{\GzBias}{$-$0.01}
-\newcommand{\GzCyc}{0.594}
-\newcommand{\GzFac}{2.9}
-\newcommand{\GzMae}{0.567}
-\newcommand{\GzR}{0.55}
-\newcommand{\GzVsBalch}{$-$0.069 [$-$0.143, $+$0.004]}
-\newcommand{\GzVsBalchP}{0.12}
-\newcommand{\GzVsFit}{$-$0.036 [$-$0.075, $-$0.001]}
-\newcommand{\GzVsFitP}{0.10}
-\newcommand{\GzVsOld}{$-$0.012 [$-$0.035, $+$0.012]}
-\newcommand{\GzVsOldP}{0.12}
-\newcommand{\GzVsQuad}{$+$0.011 [$-$0.037, $+$0.057]}
-\newcommand{\GzVsQuadP}{0.56}
+\newcommand{\GzCyc}{0.599}
+\newcommand{\GzFac}{3.0}
+\newcommand{\GzMae}{0.572}
+\newcommand{\GzR}{0.53}
+\newcommand{\GzVsBalch}{$-$0.064 [$-$0.137, $+$0.009]}
+\newcommand{\GzVsBalchP}{0.16}
+\newcommand{\GzVsFit}{$-$0.031 [$-$0.066, $+$0.001]}
+\newcommand{\GzVsFitP}{0.11}
+\newcommand{\GzVsOld}{$+$0.005 [$-$0.004, $+$0.014]}
+\newcommand{\GzVsOldP}{0.07}
+\newcommand{\GzVsQuad}{$+$0.016 [$-$0.034, $+$0.065]}
+\newcommand{\GzVsQuadP}{0.43}
 \newcommand{\LateBalchBias}{$-$0.72}
 \newcommand{\LateBalchMae}{0.85}
+\newcommand{\LateBig}{9}
+\newcommand{\LateCme}{1557}
+\newcommand{\LateEast}{34}
 \newcommand{\LateFitBias}{$-$0.37}
 \newcommand{\LateFitMae}{0.75}
+\newcommand{\LateLon}{W11}
 \newcommand{\LateN}{29}
 \newcommand{\LatePfu}{364}
-\newcommand{\LateRqBias}{$-$0.40}
-\newcommand{\LateRqMae}{0.71}
+\newcommand{\LateRqBias}{$-$0.36}
+\newcommand{\LateRqMae}{0.73}
+\newcommand{\LateX}{0.16}
+\newcommand{\LcLawFull}{0.606}
+\newcommand{\LcLawGap}{0.013}
+\newcommand{\LcLawSmall}{0.613}
+\newcommand{\LcMlpFull}{0.537}
+\newcommand{\LcMlpGap}{0.005}
+\newcommand{\LcMlpSmall}{0.609}
+\newcommand{\LcRfFull}{0.566}
+\newcommand{\LcRfGap}{0.163}
+\newcommand{\LcRfSixFull}{0.574}
+\newcommand{\LcRfSixGap}{0.209}
+\newcommand{\LcRfSixSmall}{0.617}
+\newcommand{\LcRfSmall}{0.639}
+\newcommand{\LcRidgeFull}{0.615}
+\newcommand{\LcRidgeGap}{0.015}
+\newcommand{\LcRidgeSmall}{0.640}
+\newcommand{\LcRqFull}{0.565}
+\newcommand{\LcRqGap}{0.008}
+\newcommand{\LcRqSixFull}{0.565}
+\newcommand{\LcRqSixGap}{0.019}
+\newcommand{\LcRqSixSmall}{0.625}
+\newcommand{\LcRqSmall}{0.597}
 \newcommand{\LeadBefore}{92}
 \newcommand{\LeadGar}{25}
 \newcommand{\LeadHalf}{18}
@@ -143,12 +227,18 @@
 \newcommand{\LeadPeak}{18}
 \newcommand{\MidBalchBias}{$-$0.47}
 \newcommand{\MidBalchMae}{0.77}
+\newcommand{\MidBig}{6}
+\newcommand{\MidCme}{1556}
+\newcommand{\MidEast}{12}
 \newcommand{\MidFitBias}{$-$0.09}
 \newcommand{\MidFitMae}{0.62}
+\newcommand{\MidLon}{W48}
 \newcommand{\MidN}{26}
 \newcommand{\MidPfu}{168}
-\newcommand{\MidRqBias}{$-$0.12}
-\newcommand{\MidRqMae}{0.66}
+\newcommand{\MidRqBias}{$-$0.13}
+\newcommand{\MidRqMae}{0.64}
+\newcommand{\MidX}{0.10}
+\newcommand{\MlpQ}{0.550}
 \newcommand{\NdBalchFive}{0.031}
 \newcommand{\NdBalchMiss}{0.657}
 \newcommand{\NdBalchScale}{0.608}
@@ -157,18 +247,18 @@
 \newcommand{\NdFitMiss}{0.608}
 \newcommand{\NdFitScale}{0.620}
 \newcommand{\NdFitThree}{0.010}
-\newcommand{\NdGtFive}{0.025}
-\newcommand{\NdGtMiss}{0.650}
-\newcommand{\NdGtScale}{0.619}
-\newcommand{\NdGtThree}{0.013}
-\newcommand{\NdNoentFive}{0.042}
-\newcommand{\NdNoentMiss}{0.634}
-\newcommand{\NdNoentScale}{0.611}
-\newcommand{\NdNoentThree}{0.023}
+\newcommand{\NdGtFive}{0.026}
+\newcommand{\NdGtMiss}{0.645}
+\newcommand{\NdGtScale}{0.615}
+\newcommand{\NdGtThree}{0.011}
+\newcommand{\NdNoentFive}{0.034}
+\newcommand{\NdNoentMiss}{0.645}
+\newcommand{\NdNoentScale}{0.620}
+\newcommand{\NdNoentThree}{0.017}
 \newcommand{\NdQbFive}{0.042}
-\newcommand{\NdQbMiss}{0.696}
-\newcommand{\NdQbScale}{0.601}
-\newcommand{\NdQbThree}{0.021}
+\newcommand{\NdQbMiss}{0.699}
+\newcommand{\NdQbScale}{0.600}
+\newcommand{\NdQbThree}{0.020}
 \newcommand{\NdQuadFive}{0.052}
 \newcommand{\NdQuadMiss}{0.562}
 \newcommand{\NdQuadScale}{0.579}
@@ -183,72 +273,99 @@
 \newcommand{\NdRidgeThree}{0.003}
 \newcommand{\NoiseHalf}{0.30}
 \newcommand{\NoiseSd}{0.60}
-\newcommand{\NzBalchAllFive}{$-$0.006 [$-$0.028, $+$0.016]}
-\newcommand{\NzBalchAllThree}{$+$0.002 [$-$0.013, $+$0.018]}
-\newcommand{\NzBalchMaeFive}{$-$0.051 [$-$0.117, $+$0.015]}
-\newcommand{\NzBalchXrFive}{$-$0.010 [$-$0.026, $+$0.006]}
-\newcommand{\NzEntDegFive}{$-$0.017 [$-$0.033, $-$0.001]}
-\newcommand{\NzEntShiftFive}{$-$0.000 [$-$0.008, $+$0.008]}
-\newcommand{\NzEntShiftThree}{$+$0.007 [$+$0.001, $+$0.013]}
-\newcommand{\NzFitAllFive}{$-$0.001 [$-$0.021, $+$0.020]}
-\newcommand{\NzMissBalch}{$-$0.007 [$-$0.097, $+$0.080]}
-\newcommand{\NzMissQuad}{$+$0.088 [$+$0.012, $+$0.164]}
-\newcommand{\NzQbFitFive}{$+$0.016 [$+$0.002, $+$0.030]}
-\newcommand{\NzQuadAllFive}{$-$0.026 [$-$0.050, $-$0.003]}
-\newcommand{\NzQuadMaeFive}{$+$0.009 [$-$0.042, $+$0.060]}
-\newcommand{\NzRidgeXrFive}{$+$0.016 [$+$0.005, $+$0.028]}
+\newcommand{\NzBalchAllFive}{$-$0.006 [$-$0.025, $+$0.014]}
+\newcommand{\NzBalchAllThree}{$+$0.000 [$-$0.013, $+$0.013]}
+\newcommand{\NzBalchMaeFive}{$-$0.057 [$-$0.125, $+$0.011]}
+\newcommand{\NzBalchXrFive}{$-$0.008 [$-$0.024, $+$0.008]}
+\newcommand{\NzEntDegFive}{$-$0.008 [$-$0.022, $+$0.006]}
+\newcommand{\NzEntShiftFive}{$-$0.005 [$-$0.013, $+$0.003]}
+\newcommand{\NzEntShiftThree}{$+$0.000 [$-$0.005, $+$0.006]}
+\newcommand{\NzFitAllFive}{$+$0.000 [$-$0.018, $+$0.018]}
+\newcommand{\NzMissBalch}{$-$0.012 [$-$0.098, $+$0.072]}
+\newcommand{\NzMissQuad}{$+$0.083 [$+$0.010, $+$0.156]}
+\newcommand{\NzQbFitFive}{$+$0.016 [$+$0.003, $+$0.030]}
+\newcommand{\NzQuadAllFive}{$-$0.026 [$-$0.048, $-$0.004]}
+\newcommand{\NzQuadMaeFive}{$+$0.003 [$-$0.046, $+$0.051]}
+\newcommand{\NzRidgeXrFive}{$+$0.018 [$+$0.007, $+$0.030]}
+\newcommand{\OAbove}{0}
+\newcommand{\OFlBalch}{0.69}
+\newcommand{\OFlBalchMax}{895}
+\newcommand{\OFlGb}{0.58}
+\newcommand{\OFlGbMax}{2377}
+\newcommand{\OFlLaw}{0.75}
+\newcommand{\OFlLawMax}{357}
+\newcommand{\OFlRf}{0.64}
+\newcommand{\OFlRfMax}{1678}
+\newcommand{\OFlRq}{0.62}
+\newcommand{\OFlRqMax}{799}
+\newcommand{\OFlRqSix}{0.61}
+\newcommand{\OFlRqSixMax}{749}
+\newcommand{\OPkBalch}{1.35}
+\newcommand{\OPkBalchMax}{704}
+\newcommand{\OPkQuad}{1.29}
+\newcommand{\OPkQuadMax}{1211}
+\newcommand{\OPkRf}{1.45}
+\newcommand{\OPkRfMax}{373}
+\newcommand{\OPkRq}{1.44}
+\newcommand{\OPkRqMax}{269}
+\newcommand{\OPkTrainMax}{956}
 \newcommand{\PBalchClim}{$-$0.069 [$-$0.147, $+$0.012]}
-\newcommand{\PChronoBalch}{$+$0.081 [$-$0.092, $+$0.248]}
-\newcommand{\PChronoFit}{$+$0.020 [$-$0.063, $+$0.102]}
-\newcommand{\PCycBalch}{$+$0.101 [$-$0.065, $+$0.260]}
-\newcommand{\PCycFit}{$+$0.040 [$-$0.028, $+$0.111]}
+\newcommand{\PChronoBalch}{$+$0.041 [$-$0.102, $+$0.178]}
+\newcommand{\PChronoFit}{$-$0.020 [$-$0.093, $+$0.048]}
+\newcommand{\PCycBalch}{$+$0.082 [$-$0.057, $+$0.213]}
+\newcommand{\PCycFit}{$+$0.021 [$-$0.041, $+$0.083]}
 \newcommand{\PFitClim}{$-$0.102 [$-$0.177, $-$0.026]}
 \newcommand{\PGarFit}{$+$0.009 [$-$0.024, $+$0.042]}
 \newcommand{\PLonFit}{$+$0.001 [$-$0.020, $+$0.021]}
 \newcommand{\PQuadBalch}{$-$0.080 [$-$0.159, $-$0.005]}
 \newcommand{\PQuadCycBalch}{$+$0.024 [$-$0.115, $+$0.150]}
 \newcommand{\PQuadFit}{$-$0.047 [$-$0.103, $+$0.002]}
-\newcommand{\PRqBalch}{$-$0.056 [$-$0.134, $+$0.019]}
-\newcommand{\PRqBalchFit}{$-$0.023 [$-$0.066, $+$0.018]}
-\newcommand{\PRqClim}{$-$0.125 [$-$0.192, $-$0.057]}
-\newcommand{\PRqGarcia}{$-$0.525 [$-$0.707, $-$0.352]}
-\newcommand{\PRqGarciaFit}{$-$0.032 [$-$0.083, $+$0.020]}
-\newcommand{\PRqLon}{$-$0.024 [$-$0.071, $+$0.023]}
-\newcommand{\PRqQuad}{$+$0.024 [$-$0.032, $+$0.080]}
-\newcommand{\PRqRf}{$+$0.000 [$-$0.043, $+$0.043]}
+\newcommand{\PRiseLon}{0.0002}
+\newcommand{\PRqBalch}{$-$0.052 [$-$0.130, $+$0.023]}
+\newcommand{\PRqBalchFit}{$-$0.019 [$-$0.057, $+$0.017]}
+\newcommand{\PRqClim}{$-$0.121 [$-$0.191, $-$0.050]}
+\newcommand{\PRqGarcia}{$-$0.520 [$-$0.703, $-$0.348]}
+\newcommand{\PRqGarciaFit}{$-$0.028 [$-$0.077, $+$0.021]}
+\newcommand{\PRqLon}{$-$0.020 [$-$0.063, $+$0.023]}
+\newcommand{\PRqQuad}{$+$0.028 [$-$0.027, $+$0.082]}
+\newcommand{\PRqRf}{$-$0.006 [$-$0.049, $+$0.037]}
+\newcommand{\PfuA}{236}
+\newcommand{\PfuB}{73}
+\newcommand{\PfuC}{48}
 \newcommand{\QBalchBias}{$-$0.01}
-\newcommand{\QBalchCyc}{0.564}
+\newcommand{\QBalchCyc}{0.567}
 \newcommand{\QBalchFac}{3.0}
-\newcommand{\QBalchMae}{0.568}
+\newcommand{\QBalchMae}{0.567}
 \newcommand{\QBalchR}{0.54}
-\newcommand{\QBalchVsFit}{$-$0.035 [$-$0.070, $-$0.003]}
-\newcommand{\QBalchVsFitCyc}{$-$0.057 [$-$0.116, $+$0.004]}
-\newcommand{\QBalchVsFitP}{0.07}
-\newcommand{\QBalchVsLon}{$-$0.035 [$-$0.074, $+$0.000]}
-\newcommand{\QBalchVsLonP}{0.10}
-\newcommand{\QBalchVsPub}{$-$0.067 [$-$0.141, $+$0.005]}
-\newcommand{\QBalchVsPubCyc}{$+$0.003 [$-$0.152, $+$0.151]}
-\newcommand{\QBalchVsPubP}{0.11}
-\newcommand{\QBalchVsQuad}{$+$0.013 [$-$0.033, $+$0.056]}
-\newcommand{\QBalchVsQuadP}{0.40}
-\newcommand{\QBalchVsRf}{$-$0.005 [$-$0.056, $+$0.046]}
-\newcommand{\QBalchVsRfP}{0.91}
-\newcommand{\QBalchVsRidge}{$-$0.041 [$-$0.077, $-$0.008]}
-\newcommand{\QBalchVsRidgeP}{0.03}
-\newcommand{\QBothBias}{$-$0.02}
-\newcommand{\QBothCyc}{0.592}
-\newcommand{\QBothFac}{3.1}
-\newcommand{\QBothMae}{0.587}
+\newcommand{\QBalchVsFit}{$-$0.036 [$-$0.070, $-$0.006]}
+\newcommand{\QBalchVsFitCyc}{$-$0.054 [$-$0.111, $+$0.005]}
+\newcommand{\QBalchVsFitP}{0.04}
+\newcommand{\QBalchVsLon}{$-$0.037 [$-$0.074, $-$0.002]}
+\newcommand{\QBalchVsLonP}{0.09}
+\newcommand{\QBalchVsPub}{$-$0.069 [$-$0.142, $+$0.003]}
+\newcommand{\QBalchVsPubCyc}{$+$0.007 [$-$0.149, $+$0.153]}
+\newcommand{\QBalchVsPubP}{0.14}
+\newcommand{\QBalchVsQuad}{$+$0.011 [$-$0.033, $+$0.054]}
+\newcommand{\QBalchVsQuadP}{0.39}
+\newcommand{\QBalchVsRf}{$-$0.007 [$-$0.058, $+$0.046]}
+\newcommand{\QBalchVsRfP}{0.87}
+\newcommand{\QBalchVsRidge}{$-$0.042 [$-$0.076, $-$0.011]}
+\newcommand{\QBalchVsRidgeP}{0.01}
+\newcommand{\QBothBias}{$-$0.01}
+\newcommand{\QBothCyc}{0.582}
+\newcommand{\QBothFac}{3.2}
+\newcommand{\QBothMae}{0.588}
 \newcommand{\QBothR}{0.50}
-\newcommand{\QBothVsFit}{$-$0.016 [$-$0.053, $+$0.018]}
-\newcommand{\QBothVsFitP}{0.46}
-\newcommand{\QGarBias}{$-$0.02}
-\newcommand{\QGarCyc}{0.628}
-\newcommand{\QGarFac}{3.1}
-\newcommand{\QGarMae}{0.613}
-\newcommand{\QGarR}{0.43}
-\newcommand{\QGarVsFit}{$+$0.001 [$-$0.042, $+$0.044]}
-\newcommand{\QGarVsFitP}{0.99}
+\newcommand{\QBothVsFit}{$-$0.015 [$-$0.051, $+$0.017]}
+\newcommand{\QBothVsFitP}{0.62}
+\newcommand{\QCycBias}{$+$0.10}
+\newcommand{\QGarBias}{$-$0.01}
+\newcommand{\QGarCyc}{0.686}
+\newcommand{\QGarFac}{3.9}
+\newcommand{\QGarMae}{0.666}
+\newcommand{\QGarR}{0.23}
+\newcommand{\QGarVsFit}{$+$0.054 [$+$0.001, $+$0.107]}
+\newcommand{\QGarVsFitP}{0.02}
 \newcommand{\QuadBias}{0.00}
 \newcommand{\QuadCoA}{3.34}
 \newcommand{\QuadCoAHi}{3.80}
@@ -305,68 +422,60 @@
 \newcommand{\RfAllRmse}{0.71}
 \newcommand{\RfAllWten}{85.6}
 \newcommand{\RfAllWthree}{56.8}
-\newcommand{\RfBias}{$-$0.00}
-\newcommand{\RfCycBias}{0.15}
-\newcommand{\RfCycMae}{0.682}
-\newcommand{\RfCytBias}{$-$0.16}
-\newcommand{\RfCytMae}{0.553}
-\newcommand{\RfFac}{2.9}
-\newcommand{\RfHi}{0.664}
-\newcommand{\RfLo}{0.497}
-\newcommand{\RfMae}{0.580}
+\newcommand{\RfBias}{0.00}
+\newcommand{\RfCycBias}{0.10}
+\newcommand{\RfCycMae}{0.660}
+\newcommand{\RfCytBias}{$-$0.14}
+\newcommand{\RfCytMae}{0.578}
+\newcommand{\RfFac}{3.1}
+\newcommand{\RfHi}{0.672}
+\newcommand{\RfLo}{0.513}
+\newcommand{\RfMae}{0.590}
+\newcommand{\RfQCyc}{0.610}
 \newcommand{\RfQMae}{0.574}
 \newcommand{\RfQVsLon}{$-$0.030 [$-$0.093, $+$0.030]}
 \newcommand{\RfQVsLonP}{0.45}
 \newcommand{\RfQVsQuad}{$+$0.018 [$-$0.030, $+$0.065]}
 \newcommand{\RfQVsQuadP}{0.34}
-\newcommand{\RfR}{0.51}
-\newcommand{\RfRho}{0.45}
+\newcommand{\RfR}{0.52}
+\newcommand{\RfRho}{0.43}
 \newcommand{\RfRmse}{0.73}
-\newcommand{\RfWten}{83.8}
-\newcommand{\RfWthree}{52.3}
+\newcommand{\RfWten}{84.7}
+\newcommand{\RfWthree}{47.7}
+\newcommand{\RhoRiseLon}{$-$0.34}
 \newcommand{\RidgeQMae}{0.609}
-\newcommand{\RqAllBias}{$-$0.02}
-\newcommand{\RqAllCycBias}{0.12}
-\newcommand{\RqAllCycMae}{0.648}
-\newcommand{\RqAllCytBias}{$-$0.17}
-\newcommand{\RqAllCytMae}{0.560}
-\newcommand{\RqAllFac}{3.1}
-\newcommand{\RqAllHi}{0.661}
-\newcommand{\RqAllLo}{0.488}
-\newcommand{\RqAllMae}{0.573}
-\newcommand{\RqAllR}{0.50}
-\newcommand{\RqAllRho}{0.49}
-\newcommand{\RqAllRmse}{0.73}
-\newcommand{\RqAllWten}{81.1}
-\newcommand{\RqAllWthree}{49.5}
-\newcommand{\RqBias}{$-$0.02}
-\newcommand{\RqCycBias}{0.14}
-\newcommand{\RqCycMae}{0.662}
-\newcommand{\RqCytBias}{$-$0.17}
-\newcommand{\RqCytMae}{0.558}
-\newcommand{\RqFac}{3.2}
-\newcommand{\RqHi}{0.668}
-\newcommand{\RqLo}{0.494}
-\newcommand{\RqMae}{0.580}
-\newcommand{\RqR}{0.50}
-\newcommand{\RqRho}{0.49}
-\newcommand{\RqRmse}{0.74}
+\newcommand{\RqBias}{$-$0.01}
+\newcommand{\RqCycBias}{0.06}
+\newcommand{\RqCycMae}{0.642}
+\newcommand{\RqCytBias}{$-$0.14}
+\newcommand{\RqCytMae}{0.579}
+\newcommand{\RqFac}{3.3}
+\newcommand{\RqHi}{0.675}
+\newcommand{\RqLo}{0.497}
+\newcommand{\RqMae}{0.584}
+\newcommand{\RqR}{0.48}
+\newcommand{\RqRho}{0.47}
+\newcommand{\RqRmse}{0.75}
+\newcommand{\RqVsMlp}{$+$0.017 [$-$0.025, $+$0.057]}
+\newcommand{\RqVsSur}{$+$0.025 [$-$0.012, $+$0.064]}
 \newcommand{\RqWten}{83.8}
-\newcommand{\RqWthree}{49.5}
+\newcommand{\RqWthree}{46.8}
 \newcommand{\RqZeroBias}{$-$0.01}
-\newcommand{\RqZeroCycBias}{0.22}
-\newcommand{\RqZeroCycMae}{0.663}
-\newcommand{\RqZeroCytBias}{$-$0.19}
-\newcommand{\RqZeroCytMae}{0.560}
-\newcommand{\RqZeroFac}{3.2}
-\newcommand{\RqZeroHi}{0.664}
-\newcommand{\RqZeroLo}{0.494}
-\newcommand{\RqZeroMae}{0.579}
-\newcommand{\RqZeroR}{0.51}
-\newcommand{\RqZeroRho}{0.45}
-\newcommand{\RqZeroRmse}{0.73}
+\newcommand{\RqZeroCycBias}{0.12}
+\newcommand{\RqZeroCycMae}{0.599}
+\newcommand{\RqZeroCytBias}{$-$0.15}
+\newcommand{\RqZeroCytMae}{0.575}
+\newcommand{\RqZeroFac}{3.0}
+\newcommand{\RqZeroHi}{0.657}
+\newcommand{\RqZeroLo}{0.489}
+\newcommand{\RqZeroMae}{0.572}
+\newcommand{\RqZeroR}{0.53}
+\newcommand{\RqZeroRho}{0.49}
+\newcommand{\RqZeroRmse}{0.72}
 \newcommand{\RqZeroWten}{83.8}
-\newcommand{\RqZeroWthree}{45.0}
+\newcommand{\RqZeroWthree}{50.5}
+\newcommand{\SecRf}{0.2}
+\newcommand{\SecRq}{153}
 \newcommand{\SenBgBias}{$-$0.41}
 \newcommand{\SenBgMae}{0.653}
 \newcommand{\SenBgN}{111}
@@ -397,7 +506,52 @@
 \newcommand{\SenTrueBias}{$-$0.24}
 \newcommand{\SenTrueMae}{0.601}
 \newcommand{\SenTrueN}{111}
+\newcommand{\SmMlp}{0.02}
+\newcommand{\SmQuad}{0.03}
+\newcommand{\SmRf}{5.54}
+\newcommand{\SmRq}{0.22}
+\newcommand{\SurR}{0.59}
+\newcommand{\SurSixHar}{0.580}
+\newcommand{\SurSixHarD}{$-$0.008 [$-$0.041, $+$0.026]}
+\newcommand{\SurSixOne}{0.574}
+\newcommand{\SurSixOneD}{$-$0.002 [$-$0.030, $+$0.026]}
+\newcommand{\SurSixTri}{0.592}
+\newcommand{\SurSixTriD}{$-$0.020 [$-$0.054, $+$0.014]}
+\newcommand{\SurTwelveHar}{0.572}
+\newcommand{\SurTwelveHarD}{$+$0.012 [$-$0.023, $+$0.048]}
+\newcommand{\SurTwelveOne}{0.566}
+\newcommand{\SurTwelveOneD}{$+$0.018 [$-$0.009, $+$0.044]}
+\newcommand{\SurTwelveTri}{0.580}
+\newcommand{\SurTwelveTriD}{$+$0.004 [$-$0.036, $+$0.043]}
+\newcommand{\SurTwoHar}{0.555}
+\newcommand{\SurTwoHarD}{$+$0.012 [$-$0.034, $+$0.056]}
+\newcommand{\SurTwoOne}{0.542}
+\newcommand{\SurTwoOneD}{$+$0.025 [$-$0.013, $+$0.064]}
+\newcommand{\SurTwoTri}{0.561}
+\newcommand{\SurTwoTriD}{$+$0.006 [$-$0.035, $+$0.046]}
+\newcommand{\SurVsBalch}{$-$0.094 [$-$0.173, $-$0.019]}
+\newcommand{\SurVsFit}{$-$0.061 [$-$0.118, $-$0.009]}
+\newcommand{\SurVsQuad}{$-$0.014 [$-$0.053, $+$0.023]}
 \newcommand{\TruncB}{1.33}
 \newcommand{\TruncHi}{1.94}
 \newcommand{\TruncLo}{0.81}
 \newcommand{\TruncS}{0.95}
+\newcommand{\VqBest}{0.567}
+\newcommand{\VqBestVsBalch}{$-$0.069 [$-$0.144, $+$0.004]}
+\newcommand{\VqBestVsFit}{$-$0.036 [$-$0.074, $-$0.001]}
+\newcommand{\VqBestVsQuad}{$+$0.011 [$-$0.038, $+$0.057]}
+\newcommand{\VqDiffGTx}{$-$0.007 [$-$0.024, $+$0.009]}
+\newcommand{\VqDiffGZx}{$+$0.005 [$-$0.004, $+$0.014]}
+\newcommand{\VqDiffQbalch}{$-$0.001 [$-$0.007, $+$0.004]}
+\newcommand{\VqOneDiffGTx}{$-$0.010 [$-$0.032, $+$0.013]}
+\newcommand{\VqOneDiffGZx}{$+$0.015 [$-$0.004, $+$0.033]}
+\newcommand{\VqOneDiffQbalch}{$+$0.018 [$-$0.015, $+$0.051]}
+\newcommand{\VqOneGTx}{0.582}
+\newcommand{\VqOneGZx}{0.581}
+\newcommand{\VqOneQbalch}{0.587}
+\newcommand{\VqThreeGTx}{0.584}
+\newcommand{\VqThreeGZx}{0.572}
+\newcommand{\VqThreeQbalch}{0.567}
+\newcommand{\XintA}{0.14}
+\newcommand{\XintB}{0.11}
+\newcommand{\XintC}{0.09}

@@ -24,6 +24,6 @@ print(rise.describe().round(1).to_dict(), "rho rise vs y", spearmanr(rise[ok], y
 R = {}
 for n, m in (("<=12 h", ok & (rise <= 12)), ("12-24 h", ok & (rise > 12) & (rise <= 24)), (">24 h", ok & (rise > 24))):
     R[n] = {"N": int(m.sum()), "median_pfu": float(np.median(e.peak_pfu[m]))}
-    for k in ("clim:none", "balch", "balch_fit", "rqnn:G3_full", "rf:G3_full"):
+    for k in ("clim:none", "balch", "balch_fit", "vqr:G3x", "rf:G3x"):
         d = F[k].to_numpy()[m] - y[m]; R[n][k] = (round(np.abs(d).mean(), 3), round(d.mean(), 3))
 print(pd.DataFrame(R).T.to_string()); json.dump({"trunc": [float(t[0]), float(t[1]), float(np.exp(t[2]))], "b_ci": list(map(float, np.percentile(bs[:, 1], [2.5, 97.5]))), "by_rise": R}, open(D / "truncated.json", "w"), indent=1)
